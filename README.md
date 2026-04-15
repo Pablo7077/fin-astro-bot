@@ -1,25 +1,66 @@
-# 🔮 FIN ASTRO Bot
+# 🔮 FIN ASTRO BOT v2.0
 
-**Financial Astrology Research Bot for Nifty & Bank Nifty**
+**The Most Comprehensive Financial Astrology Research Engine**
 
-Uses Vedic (Jyotish) planetary calculations correlated with historical 
-market data to generate research insights, gap projections, and 
-intraday timing ideas.
+Combines 12+ Vedic (Jyotish) astrological techniques with historical market data
+to generate research insights, gap projections, intraday timing, and sector signals.
 
-## Features
-- 📍 Accurate Vedic (Lahiri ayanamsha) planetary positions
-- 🌙 Moon sign, nakshatra, tithi, and phase analysis
-- 🔄 Retrograde detection and market impact analysis
-- 🔥 Combustion detection
-- ⭐ Yoga identification (Guru-Chandala, Gaja-Kesari, etc.)
-- 📊 Historical correlation with Nifty gap patterns
-- 🎯 Astro Gap Projections with confidence levels
+Works with **ANY market** — Nifty, Bank Nifty, Bitcoin, NASDAQ, Gold, individual stocks, and more.
 
-## Quick Start
+## 🌟 Features
+
+| Feature | Description |
+|---------|-------------|
+| 📍 Planetary Positions | Vedic sidereal (Lahiri) with dignity, nakshatra, pada |
+| ⭐ 20+ Yogas | Gaja-Kesari, Guru-Chandala, Kala Sarpa, Veshi, Vashi, Ubhayachari... |
+| 📅 Full Panchang | Tithi, Karana, Nitya Yoga, Vara, Gandanta, Void of Course |
+| ⏰ Planetary Hours | Hora table + Rahu Kaal + Abhijit Muhurta for intraday timing |
+| 🔮 Vimshottari Dasha | Mahadasha/Antardasha for Nifty, Bank Nifty, Sensex |
+| 📊 Ashtakavarga | Bindu-based transit scoring (astro → numbers) |
+| 📐 Divisional Charts | Navamsha (D-9), Dashamsha (D-10), Vargottama detection |
+| 📈 Bradley Siderograph | Composite turning-point indicator |
+| 🌑 Eclipse Detection | Solar/lunar eclipses + corridor analysis |
+| 🏛️ Mundane Astrology | Transits to India/Nifty birth charts |
+| 🎯 KP System | Sub-lord analysis + Ruling Planets |
+| 🏭 Sector Rotation | Planet → sector/commodity mapping with signals |
+| 🌐 Any Symbol | Nifty, Bitcoin, TATAPOWER, AAPL, Gold, NASDAQ — anything |
+| 📊 Historical Backtest | Moon sign, nakshatra, tithi, karana, retrograde hit rates |
+| 📅 Reports | Daily, Weekly, Monthly auto-generated reports |
+| 🖥️ Web Dashboard | Streamlit-powered browser interface |
+
+## 🚀 Quick Start
+
 ```bash
+# Install
 pip install -r requirements.txt
-python main.py --quick              # Today's planetary analysis
-python main.py --quick 2025-01-15   # Specific date
-python main.py --build              # Build historical dataset (first time)
-python main.py 2025-01-15           # Full projection with history
-python main.py --backtest           # Full back-test report
+
+# Quick planetary analysis (today)
+python main.py --quick
+
+# Full projection for any symbol
+python main.py --project nifty
+python main.py --project bitcoin 2025-03-20
+python main.py --project tatapower
+
+# Intraday hora timing
+python main.py --hora
+
+# Sector rotation signals
+python main.py --sectors
+
+# Dasha analysis
+python main.py --dasha nifty
+
+# Weekly/Monthly reports
+python main.py --weekly nifty
+python main.py --monthly nifty
+
+# Build historical dataset & backtest
+python main.py --build nifty
+python main.py --backtest nifty
+
+# Web dashboard
+python main.py --dashboard
+
+# Interactive menu
+python main.py

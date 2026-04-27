@@ -1,0 +1,26 @@
+FIN ASTRO BOT v2.5 QA REPORT
+============================
+Build: v2.5-conservative-balanced-pipeline-2026-04-28
+
+Checks completed in this build package:
+1. Inspected uploaded project structure.
+2. Restored/kept full core, market, analysis, reports, dashboard and ephe folders.
+3. Added missing analysis/projection_backtester.py.
+4. Rebuilt analysis/projector.py with one connected decision pipeline for CLI, reports and backtests.
+5. Rebuilt reports/daily_report.py and reports/weekly_report.py so weekly output prints full daily projections again.
+6. Rebuilt main.py with health command and safer command routing.
+7. Added bot_health_check.py.
+8. Ran Python AST syntax validation across all .py files: PASSED.
+9. Scanned for known risky integer formatting patterns that caused prior float crashes: PASSED.
+
+Recommended smoke tests after replacing files:
+python main.py --health
+python main.py --quick
+python main.py --project nifty
+python main.py --weekly nifty
+python main.py --backtest nifty
+python main.py --projection-backtest nifty 2024-01-01 2024-12-31
+
+Notes:
+- This build does not include your venv, .git, cache or output folders.
+- Existing cache/output files in your local folder can remain. If cache behaves oddly, rebuild with: python main.py --build nifty 2010-01-01
